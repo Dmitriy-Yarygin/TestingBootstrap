@@ -86,5 +86,14 @@ address{
     top: 0;
     left: 0px;
     min-height: 300px;
-  width:100%;
+}
+
+.width100pct {
+  width:100%;    
+}
+
+.carouselButtons {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
 }

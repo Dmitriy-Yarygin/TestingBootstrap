@@ -209,7 +209,7 @@
 
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<img class="img-responsive" src="img/uthappizza.png" alt="Uthappizza">
+							<img class="img-responsive width100pct" src="img/uthappizza.png" alt="Uthappizza">
 							<div class="carousel-caption">
 								<h2>Uthappizza <span class="label label-danger">Hot</span> <span class="badge">$4.99</span></h2>
 								<p>A unique combination of Indian Uthappam (pancake) and
@@ -219,7 +219,7 @@
 							</div>
 						</div>
 						<div class="item">
-							<img class="img-responsive" src="img/buffet.png" alt="Weekend Grand Buffet">
+							<img class="img-responsive width100pct" src="img/buffet.png" alt="Weekend Grand Buffet">
 							<div class="carousel-caption">
 								<h2>Weekend Grand Buffet
 									<span class="label label-danger label-xs">New</span>
@@ -228,7 +228,7 @@
 							</div>
 						</div>
 						<div class="item">
-							<img class="img-responsive" src="img/alberto.png" alt="Alberto Somayya">
+							<img class="img-responsive width100pct" src="img/alberto.png" alt="Alberto Somayya">
 							<div class="carousel-caption">
 								<h2 class="media-heading">Alberto Somayya</h2>
 								<h4>Executive Chef</h4>
@@ -249,11 +249,24 @@
 					<a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
 						<span class="icon-next" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
-					</a>            
+					</a>    
+
+					<div class="btn-group carouselButtons">
+						<button class="btn btn-danger btn-sm" id="carousel-background">
+							<span class="fa fa-arrows-h" aria-hidden="true"></span>
+						</button>
+						<button class="btn btn-danger btn-sm" id="carousel-pause">
+							<span class="fa fa-pause" aria-hidden="true"></span>
+						</button>
+						<button class="btn btn-danger btn-sm" id="carousel-play">
+							<span class="fa fa-play" aria-hidden="true"></span>
+						</button>						
+					</div>        
 
 				</div>
 			</div>
-		</div>    
+
+		</div> <!-- Carousel end -->
 
 		<div  id='firstRow'  class="row  row-content">
 			<div class="col-xs-12 col-sm-3 col-sm-push-9">
@@ -382,7 +395,18 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 	<script>
-		// $(document).ready(function() { $('[data-toggle="tooltip"]').tooltip(); });
+        $(document).ready(function(){
+			$("#mycarousel").carousel( { interval: 2000 } );
+			$("#carousel-background").click(function(){
+                $(".carousel-inner img").toggleClass( "width100pct" );
+            });			
+			$("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });			
+			$("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
 	</script>
 </body>
 
