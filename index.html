@@ -257,10 +257,7 @@
 						</button>
 						<button class="btn btn-danger btn-sm" id="carousel-pause">
 							<span class="fa fa-pause" aria-hidden="true"></span>
-						</button>
-						<button class="btn btn-danger btn-sm" id="carousel-play">
-							<span class="fa fa-play" aria-hidden="true"></span>
-						</button>						
+						</button>			
 					</div>        
 
 				</div>
@@ -392,24 +389,11 @@
 
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script defer src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script>
-        $(document).ready(function(){
-			$("#mycarousel").carousel( { interval: 700 } );
-			$("#carousel-background").click(function(){
-                $(".carousel-inner img").toggleClass( "width100pct" );
-            });			
-			$("#carousel-pause").click(function(){
-                $("#mycarousel").carousel('pause');
-            });			
-			$("#carousel-play").click(function(){
-                $("#mycarousel").carousel('cycle');
-            });
-        });
-	</script>
+    <script defer src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script defer src="js/main.js"></script>
 </body>
 
 </html>
