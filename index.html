@@ -187,7 +187,7 @@
 					</div>
 					<div class="col-xs-6 col-sm-12 col-lg-6 ">
 						<p style="padding:20px;"></p>
-						<a type="button" class="btn btn-warning" data-toggle="modal" data-target="#reserveTableModal" role="button">Reserve table</a>                	
+						<button id="reserveTableBtn" class="btn btn-warning">Reserve table</button>                	
 					</div>
 				</div>
 			</div>
@@ -398,6 +398,14 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script>
         $(document).ready(function(){
+
+        	$("#loginBtn").click(function(){ 
+        		$('#loginModal').modal({ keyboard: true });
+            });		
+        	$("#reserveTableBtn").click(function(){ 
+        		$('#reserveTableModal').modal({ keyboard: true });
+            });		
+
 			$("#mycarousel").carousel( { interval: 700 } );
 			$("#carousel-background").click(function(){
                 $(".carousel-inner img").toggleClass( "width100pct" );
